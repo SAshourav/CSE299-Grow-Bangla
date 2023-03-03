@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Landing.css';
 
 function LandingPage() {
+  const navigate = useNavigate();
+  const cosumerHandler = () => {
+    navigate('/login');
+  }
+  const farmerHandler = () => {
+    navigate('/loginF');
+  }
   const [consumerCount, setConsumerCount] = useState(0);
   const [farmerCount, setFarmerCount] = useState(0);
 
@@ -30,8 +38,8 @@ function LandingPage() {
       <div className="leading-login">
         <h2>Welcome To Grow Bangla !</h2>
         <h2>Which Role You Want To Play?</h2>
-        <button>Consumer</button>
-        <button>Farmer</button>
+        <button onClick={cosumerHandler}>Consumer</button>
+        <button onClick={farmerHandler}>Farmer</button>
       </div>
       <div className="counters">
         <div className="consumer">

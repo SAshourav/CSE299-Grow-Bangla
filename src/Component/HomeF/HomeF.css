@@ -1,0 +1,17 @@
+.H1{
+    font-size: 25px;
+    margin-top: 50px;
+}
+.sell-container{
+    max-width: 500px;
+    margin: auto;
+    background-color: #394141;
+    padding: 50px;
+}
+.sell-form label{
+    font-size: 20px;
+    color: white;
+}
+.sell-form input{
+    font-size: 15px;
+}
