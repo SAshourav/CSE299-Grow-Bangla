@@ -10,9 +10,13 @@ import SignUpC from './Component/SignUpC/SignUpC';
 import LoginF from './Component/LoginF/LoginF';
 import HomeF from './Component/HomeF/HomeF';
 import Farmer from './layout/Farmer';
+import OrderF from './Component/OrderF/OrderF';
+import AccountF from './Component/AccountF/AccountF';
+import LandingPage from './Component/Landing/Landing';
 
 function App() {
   const router = createBrowserRouter([
+    {path: '/', element: <LandingPage></LandingPage>},
     {
       path: '/' , element: <Main></Main> , children: [
         {path:'/', element: <Home></Home>},
@@ -23,7 +27,9 @@ function App() {
     },
     {
       path: '/', element: <Farmer></Farmer>, children: [
-        {path: '/homeF', element: <HomeF></HomeF>}
+        {path: '/homeF', element: <HomeF></HomeF>},
+        {path: '/orderF', element: <OrderF></OrderF>},
+        {path: '/accountF', element: <AccountF></AccountF>}
       ]
     },
     {path: '/landing', element: <Landing></Landing>},
